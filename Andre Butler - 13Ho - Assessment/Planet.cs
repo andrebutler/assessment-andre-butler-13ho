@@ -18,10 +18,10 @@ namespace Andre_Butler___13Ho___Assessment
         //Create a constructor (initialises the values of the fields)
         public Planet()
         {
-            x = 10;
-            y = 10;
-            width = 20;
-            height = 20;
+            x = 50;
+            y = 250;
+            width = 25;
+            height = 100;
             //planetImage contains the plane1.png image
             planetImage = Properties.Resources.planet;
             planetRec = new Rectangle(x, y, width, height);
