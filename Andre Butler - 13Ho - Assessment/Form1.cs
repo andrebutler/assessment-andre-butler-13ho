@@ -14,10 +14,16 @@ namespace Andre_Butler___13Ho___Assessment
     {
         Graphics g; //declare a graphics object called g
         Planet planet1 = new Planet(); //create the object, planet1
-
+        // declare space for an array of 7 objects called planet 
+        Missile[] missile = new Missile[7];
         public Form1()
         {
             InitializeComponent();
+            for (int i = 0; i < 7; i++)
+            {
+                missile[i] = new Missile();
+            }
+
         }
 
         private void panel1_Paint(object sender, PaintEventArgs e)
@@ -26,6 +32,12 @@ namespace Andre_Butler___13Ho___Assessment
             g = e.Graphics;
             //call the Planet class's DrawPlanet method to draw the image planet1 
             planet1.DrawPlanet(g);
+            for (int i = 0; i < 7; i++)
+            {
+                //call the Planet class's drawPlanet method to draw the images
+                missile[i].DrawMissile(g);
+            }
+
 
         }
     }

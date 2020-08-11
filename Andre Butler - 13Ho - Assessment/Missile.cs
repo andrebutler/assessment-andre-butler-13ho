@@ -7,36 +7,35 @@ using System.Threading.Tasks;
 
 namespace Andre_Butler___13Ho___Assessment
 {
-    class Planet
+    class Missile
     {
-
         // declare fields to use in the class
         public int x, y, width, height;//variables for the rectangle
-        public Image planetImage;//variable for the planet's image
-        public Rectangle planetRec;//variable for a rectangle to place our image in
-        public int score;
-        //Create a constructor (initialises the values of the fields)
-        public Planet()
-        {
-            x = 50;
-            y = 250;
-            width = 25;
-            height = 100;
-            //planetImage contains the plane1.png image
-            planetImage = Properties.Resources.planet;
-            planetRec = new Rectangle(x, y, width, height);
-        }
+        public Image missileImage;//variable for the missile's image
 
+        public Rectangle missileRec;//variable for a rectangle to place our image in
+        public int score;
+
+        //Create a constructor (initialises the values of the fields)
+        public Missile()
+        {
+            x = 5;
+            y = 10;
+            width = 50;
+            height = 25;
+            //planetImage contains the plane1.png image
+            missileImage = Properties.Resources.missile;
+            missileRec = new Rectangle(x, y, width, height);
+        }
 
         // Methods for the Planet class
-        public void DrawPlanet(Graphics g)
+        public void DrawMissile(Graphics g)
         {
-            g.DrawImage(planetImage, planetRec);
-           
+            
+            g.DrawImage(missileImage, missileRec);
         }
 
+
+
     }
-
-
-
 }
