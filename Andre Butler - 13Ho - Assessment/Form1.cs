@@ -35,7 +35,7 @@ namespace Andre_Butler___13Ho___Assessment
             for (int i = 0; i < 7; i++)
             {
                 //call the Planet class's drawPlanet method to draw the images
-                missile[i].DrawMissile(g);
+                missile[i].DrawMissile(g);//
             }
 
 
