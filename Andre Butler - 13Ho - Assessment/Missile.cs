@@ -4,6 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Drawing;
 using System.Threading.Tasks;
+using System.Security.Cryptography.X509Certificates;
 
 namespace Andre_Butler___13Ho___Assessment
 {
@@ -17,9 +18,9 @@ namespace Andre_Butler___13Ho___Assessment
         public int score;
 
         //Create a constructor (initialises the values of the fields)
-        public Missile()
+        public Missile(int x)
         {
-            x = 5;
+           //x=5;
             y = 10;
             width = 50;
             height = 25;

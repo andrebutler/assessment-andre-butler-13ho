@@ -21,8 +21,10 @@ namespace Andre_Butler___13Ho___Assessment
             InitializeComponent();
             for (int i = 0; i < 7; i++)
             {
-                missile[i] = new Missile();
+                int x = 10 + (i * 75);
+               missile[i] = new Missile(x);
             }
+
 
         }
 
@@ -35,7 +37,7 @@ namespace Andre_Butler___13Ho___Assessment
             for (int i = 0; i < 7; i++)
             {
                 //call the Planet class's drawPlanet method to draw the images
-                missile[i].DrawMissile(g);//
+                missile[i].DrawMissile(g);
             }
 
 

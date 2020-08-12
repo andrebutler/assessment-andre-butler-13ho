@@ -16,9 +16,9 @@ namespace Andre_Butler___13Ho___Assessment
         public Rectangle planetRec;//variable for a rectangle to place our image in
         public int score;
         //Create a constructor (initialises the values of the fields)
-        public Planet()
+        public Planet(int spacing)
         {
-            x = 50;
+            x = spacing;
             y = 250;
             width = 25;
             height = 100;
@@ -31,6 +31,7 @@ namespace Andre_Butler___13Ho___Assessment
         // Methods for the Planet class
         public void DrawPlanet(Graphics g)
         {
+            planetRec = new Rectangle(x, y, width, height);
             g.DrawImage(planetImage, planetRec);
            
         }
