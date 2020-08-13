@@ -28,24 +28,31 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.panel1 = new System.Windows.Forms.Panel();
+            this.components = new System.ComponentModel.Container();
+            this.PnlGame = new System.Windows.Forms.Panel();
+            this.TmrPlanet = new System.Windows.Forms.Timer(this.components);
             this.SuspendLayout();
             // 
-            // panel1
+            // PnlGame
             // 
-            this.panel1.BackColor = System.Drawing.Color.DarkGray;
-            this.panel1.Location = new System.Drawing.Point(12, 80);
-            this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(425, 358);
-            this.panel1.TabIndex = 0;
-            this.panel1.Paint += new System.Windows.Forms.PaintEventHandler(this.panel1_Paint);
+            this.PnlGame.BackColor = System.Drawing.Color.DarkGray;
+            this.PnlGame.Location = new System.Drawing.Point(12, 80);
+            this.PnlGame.Name = "PnlGame";
+            this.PnlGame.Size = new System.Drawing.Size(425, 358);
+            this.PnlGame.TabIndex = 0;
+            this.PnlGame.Paint += new System.Windows.Forms.PaintEventHandler(this.panel1_Paint);
+            // 
+            // TmrPlanet
+            // 
+            this.TmrPlanet.Enabled = true;
+            this.TmrPlanet.Tick += new System.EventHandler(this.TmrPlanet_Tick);
             // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(800, 450);
-            this.Controls.Add(this.panel1);
+            this.ClientSize = new System.Drawing.Size(600, 450);
+            this.Controls.Add(this.PnlGame);
             this.Name = "Form1";
             this.Text = "Form1";
             this.ResumeLayout(false);
@@ -54,7 +61,8 @@
 
         #endregion
 
-        private System.Windows.Forms.Panel panel1;
+        private System.Windows.Forms.Panel PnlGame;
+        private System.Windows.Forms.Timer TmrPlanet;
     }
 }
 

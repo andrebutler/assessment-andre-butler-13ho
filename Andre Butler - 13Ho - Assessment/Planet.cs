@@ -36,6 +36,14 @@ namespace Andre_Butler___13Ho___Assessment
            
         }
 
+        public void MovePlanet()
+        {
+            y += 5;
+
+            planetRec.Location = new Point(x, y);
+        }
+
+
     }
 
 

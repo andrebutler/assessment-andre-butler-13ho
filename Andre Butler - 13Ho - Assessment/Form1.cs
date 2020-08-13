@@ -42,5 +42,16 @@ namespace Andre_Butler___13Ho___Assessment
 
 
         }
+
+        private void TmrPlanet_Tick(object sender, EventArgs e)
+        {
+            for (int i = 0; i < 7; i++)
+            {
+                planet[i].MovePlanet();
+
+            }
+            PnlGame.Invalidate();//makes the paint event fire to redraw the panel
+        }
     }
 }
+
