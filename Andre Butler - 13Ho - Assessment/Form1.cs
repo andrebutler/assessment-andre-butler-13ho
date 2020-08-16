@@ -13,16 +13,18 @@ namespace Andre_Butler___13Ho___Assessment
     public partial class Form1 : Form
     {
         Graphics g; //declare a graphics object called g
-        Planet planet1 = new Planet(); //create the object, planet1
+        Planet planet1 = new Planet(10); //create the object, planet1
         // declare space for an array of 7 objects called planet 
+        Planet[] planet = new Planet[7];
+
         Missile[] missile = new Missile[7];
         public Form1()
         {
             InitializeComponent();
             for (int i = 0; i < 7; i++)
             {
-                int x = 10 + (i * 75);
-               missile[i] = new Missile(x);
+                int y = 10 + (i * 75);
+               missile[i] = new Missile(y);
             }
 
 
