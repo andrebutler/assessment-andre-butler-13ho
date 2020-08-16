@@ -18,7 +18,7 @@ namespace Andre_Butler___13Ho___Assessment
         public int score;
 
         //Create a constructor (initialises the values of the fields)
-        public Missile(int x)
+        public Missile(int y)
         {
            //x=5;
             y = 10;
