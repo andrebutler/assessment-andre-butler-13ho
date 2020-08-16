@@ -18,10 +18,10 @@ namespace Andre_Butler___13Ho___Assessment
         public int score;
 
         //Create a constructor (initialises the values of the fields)
-        public Missile(int y)
+        public Missile(int spacing)
         {
            //x=5;
-            y = 10;
+            y = spacing;
             width = 50;
             height = 25;
             //planetImage contains the plane1.png image

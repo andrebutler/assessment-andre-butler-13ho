@@ -16,10 +16,10 @@ namespace Andre_Butler___13Ho___Assessment
         public Rectangle planetRec;//variable for a rectangle to place our image in
         public int score;
         //Create a constructor (initialises the values of the fields)
-        public Planet(int spacing)
+        public Planet(int x)
         {
-            x = 250;
-            y = spacing;
+            x = 400;
+            y = 10;
             width = 25;
             height = 100;
             //planetImage contains the plane1.png image
