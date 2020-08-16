@@ -49,7 +49,7 @@ namespace Andre_Butler___13Ho___Assessment
         {
             for (int i = 0; i < 7; i++)
             {
-                planet[i].MovePlanet();
+                planet[i].MovePlanet();//error arises here upon start up
 
             }
             PnlGame.Invalidate();//makes the paint event fire to redraw the panel
