@@ -16,7 +16,7 @@ namespace Andre_Butler___13Ho___Assessment
         Planet planet1 = new Planet(10); //create the object, planet1
         // declare space for an array of 7 objects called planet 
         Planet[] planet = new Planet[7];
-
+        Random yspeed = new Random();
         Missile[] missile = new Missile[7];
         public Form1()
         {
@@ -38,6 +38,11 @@ namespace Andre_Butler___13Ho___Assessment
             planet1.DrawPlanet(g);
             for (int i = 0; i < 7; i++)
             {
+
+                // generate a random number from 5 to 20 and put it in rndmspeed
+                int rndmspeed = yspeed.Next(5, 20);
+                missile[i].y += rndmspeed;
+
                 //call the Planet class's drawPlanet method to draw the images
                 missile[i].DrawMissile(g);
             }
