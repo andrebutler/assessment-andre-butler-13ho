@@ -43,7 +43,7 @@ namespace Andre_Butler___13Ho___Assessment
                 int rndmspeed = yspeed.Next(5, 20);
                 missile[i].y += rndmspeed;
 
-                //call the Planet class's drawPlanet method to draw the images
+                //call the Planet class's drawPlanet method to draw the images//
                 missile[i].DrawMissile(g);
             }
 
