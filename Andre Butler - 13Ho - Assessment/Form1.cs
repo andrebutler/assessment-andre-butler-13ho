@@ -76,7 +76,7 @@ namespace Andre_Butler___13Ho___Assessment
             if (left) // if left arrow key pressed
             {
                 move = "left";
-                planet.MovePlanet(move);
+                planet.MovePlanet(move);//
             }
 
         }
