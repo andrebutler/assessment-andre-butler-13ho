@@ -18,6 +18,8 @@ namespace Andre_Butler___13Ho___Assessment
         Planet[] planet = new Planet[7];
         Random yspeed = new Random();
         Missile[] missile = new Missile[7];
+        bool left, right;
+        string move;
         public Form1()
         {
             InitializeComponent();
@@ -43,10 +45,39 @@ namespace Andre_Butler___13Ho___Assessment
                 int rndmspeed = yspeed.Next(5, 20);
                 missile[i].y += rndmspeed;
 
-                //call the Planet class's drawPlanet method to draw the images//
+                //call the Planet class's drawPlanet method to draw the images
                 missile[i].DrawMissile(g);
             }
 
+
+        }
+
+        private void Form1_KeyDown(object sender, KeyEventArgs e)
+        {
+            if (e.KeyData == Keys.Left) { left = true; }
+            if (e.KeyData == Keys.Right) { right = true; }
+        }
+
+        private void Form1_KeyUp(object sender, KeyEventArgs e)
+        {
+
+            if (e.KeyData == Keys.Left) { left = false; }
+            if (e.KeyData == Keys.Right) { right = false; }
+
+        }
+
+        private void TmrShip_Tick(object sender, EventArgs e)
+        {
+            if (right) // if right arrow key pressed
+            {
+                move = "right";
+                planet.MovePlanet(move);
+            }
+            if (left) // if left arrow key pressed
+            {
+                move = "left";
+                planet.MovePlanet(move);
+            }
 
         }
 

@@ -31,6 +31,7 @@
             this.components = new System.ComponentModel.Container();
             this.PnlGame = new System.Windows.Forms.Panel();
             this.TmrPlanet = new System.Windows.Forms.Timer(this.components);
+            this.TmrShip = new System.Windows.Forms.Timer(this.components);
             this.SuspendLayout();
             // 
             // PnlGame
@@ -47,14 +48,23 @@
             this.TmrPlanet.Enabled = true;
             this.TmrPlanet.Tick += new System.EventHandler(this.TmrPlanet_Tick);
             // 
+            // TmrShip
+            // 
+            this.TmrShip.Enabled = true;
+            this.TmrShip.Interval = 50;
+            this.TmrShip.Tick += new System.EventHandler(this.TmrShip_Tick);
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(600, 450);
             this.Controls.Add(this.PnlGame);
+            this.KeyPreview = true;
             this.Name = "Form1";
             this.Text = "Form1";
+            this.KeyDown += new System.Windows.Forms.KeyEventHandler(this.Form1_KeyDown);
+            this.KeyUp += new System.Windows.Forms.KeyEventHandler(this.Form1_KeyUp);
             this.ResumeLayout(false);
 
         }
@@ -63,6 +73,7 @@
 
         private System.Windows.Forms.Panel PnlGame;
         private System.Windows.Forms.Timer TmrPlanet;
+        private System.Windows.Forms.Timer TmrShip;
     }
 }
 
