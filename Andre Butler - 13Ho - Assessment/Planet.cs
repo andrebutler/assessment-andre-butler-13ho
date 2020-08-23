@@ -33,38 +33,13 @@ namespace Andre_Butler___13Ho___Assessment
         {
             planetRec = new Rectangle(x, y, width, height);
             g.DrawImage(planetImage, planetRec);
-           
+
         }
 
-        public void MovePlanet1()
-        {
-            y += 5;
-
-            planetRec.Location = new Point(x, y);
-        }
-
-        public void MovePlanet(string move)
+        public void MovePlanet()
         {
             planetRec.Location = new Point(x, y);
-
-            if (move == "right")
-            {
-
-                x += 5;
-                planetRec.Location = new Point(x, y);
-            }
-
-            if (move == "left")
-            {
-
-                x -= 5;
-                planetRec.Location = new Point(x, y);
-            }
-
-
         }
-
-
 
 
 

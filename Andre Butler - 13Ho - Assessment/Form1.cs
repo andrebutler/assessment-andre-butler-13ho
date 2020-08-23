@@ -15,7 +15,7 @@ namespace Andre_Butler___13Ho___Assessment
         Graphics g; //declare a graphics object called g
         Planet planet1 = new Planet(10); //create the object, planet1
         // declare space for an array of 7 objects called planet 
-        Planet[] planet = new Planet[7];
+        Planet[] planet = new Planet();
         Random yspeed = new Random();
         Missile[] missile = new Missile[7];
         bool left, right;
@@ -66,49 +66,23 @@ namespace Andre_Butler___13Ho___Assessment
 
         }
 
+        
         private void TmrShip_Tick(object sender, EventArgs e)
         {
             if (right) // if right arrow key pressed
             {
-                if (move == "right")
-                {
-                    if (planetRec.Location.X > 450) // is spaceship within 50 of right side
-                    {
-
-                        x = 450;
-                       // planetRec.Location = new Point(x, y);
-                    }
-                    else
-                    {
-                        x += 5;
-                        //planetRec.Location = new Point(x, y);
-                    }
-
-                }
-
+                move = "right";
+                planet.MovePlanet(move);
             }
             if (left) // if left arrow key pressed
             {
-                if (move == "left")
-                {
-                    if (planetRec.Location.X < 10) // is spaceship within 10 of left side
-                    {
-
-                        x = 10;
-                        //planetRec.Location = new Point(x, y);
-                    }
-                    else
-                    {
-                        x -= 5;
-                       // planetRec.Location = new Point(x, y);
-                    }
-
-                }
-
+                move = "left";
+                planet.MovePlanet(move);
             }
 
         }
-    
+
+
 
         private void TmrPlanet_Tick(object sender, EventArgs e)
         {
