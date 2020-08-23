@@ -26,7 +26,6 @@ namespace Andre_Butler___13Ho___Assessment
             height = 25;
             //planetImage contains the plane1.png image
             missileImage = Properties.Resources.missile;
-            missileRec = new Rectangle(x, y, width, height);
         }
 
         // Methods for the Planet class

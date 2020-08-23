@@ -26,7 +26,7 @@ namespace Andre_Butler___13Ho___Assessment
             for (int i = 0; i < 7; i++)
             {
                 int y = 10 + (i * 75);
-               missile[i] = new Missile(y);
+                missile[i] = new Missile(y);
             }
 
 
@@ -70,16 +70,45 @@ namespace Andre_Butler___13Ho___Assessment
         {
             if (right) // if right arrow key pressed
             {
-                move = "right";
-                planet.MovePlanet(move);
+                if (move == "right")
+                {
+                    if (planetRec.Location.X > 450) // is spaceship within 50 of right side
+                    {
+
+                        x = 450;
+                       // planetRec.Location = new Point(x, y);
+                    }
+                    else
+                    {
+                        x += 5;
+                        //planetRec.Location = new Point(x, y);
+                    }
+
+                }
+
             }
             if (left) // if left arrow key pressed
             {
-                move = "left";
-                planet.MovePlanet(move);//
+                if (move == "left")
+                {
+                    if (planetRec.Location.X < 10) // is spaceship within 10 of left side
+                    {
+
+                        x = 10;
+                        //planetRec.Location = new Point(x, y);
+                    }
+                    else
+                    {
+                        x -= 5;
+                       // planetRec.Location = new Point(x, y);
+                    }
+
+                }
+
             }
 
         }
+    
 
         private void TmrPlanet_Tick(object sender, EventArgs e)
         {
@@ -92,4 +121,6 @@ namespace Andre_Butler___13Ho___Assessment
         }
     }
 }
+
+
 
