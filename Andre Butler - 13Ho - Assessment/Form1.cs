@@ -15,7 +15,7 @@ namespace Andre_Butler___13Ho___Assessment
         Graphics g; //declare a graphics object called g
         Planet planet1 = new Planet(10); //create the object, planet1
         // declare space for an array of 7 objects called planet 
-        Planet[] planet = new Planet();
+        Planet planet = new Planet();
         Random yspeed = new Random();
         Missile[] missile = new Missile[7];
         bool left, right;
@@ -32,12 +32,12 @@ namespace Andre_Butler___13Ho___Assessment
 
         }
 
-        private void panel1_Paint(object sender, PaintEventArgs e)
+        private void PnlGame_Paint(object sender, PaintEventArgs e)
         {
             //get the graphics used to paint on the panel control
             g = e.Graphics;
             //call the Planet class's DrawPlanet method to draw the image planet1 
-            planet1.DrawPlanet(g);
+           
             for (int i = 0; i < 7; i++)
             {
 
@@ -49,7 +49,7 @@ namespace Andre_Butler___13Ho___Assessment
                 missile[i].DrawMissile(g);
             }
 
-
+            planet1.DrawPlanet(g);
         }
 
         private void Form1_KeyDown(object sender, KeyEventArgs e)

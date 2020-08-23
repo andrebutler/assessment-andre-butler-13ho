@@ -41,8 +41,7 @@
             this.PnlGame.Name = "PnlGame";
             this.PnlGame.Size = new System.Drawing.Size(425, 358);
             this.PnlGame.TabIndex = 0;
-            this.PnlGame.Paint += new System.Windows.Forms.PaintEventHandler(this.panel1_Paint);
-            // 
+            //
             // TmrPlanet
             // 
             this.TmrPlanet.Enabled = true;
