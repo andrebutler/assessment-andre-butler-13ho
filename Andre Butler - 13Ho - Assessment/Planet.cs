@@ -19,7 +19,7 @@ namespace Andre_Butler___13Ho___Assessment
         public Planet()
         {
             x = 10;
-            y = 10;
+            y = 250;
             width = 25;
             height = 100;
             //planetImage contains the plane1.png image

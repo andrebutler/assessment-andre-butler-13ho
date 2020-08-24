@@ -20,7 +20,7 @@ namespace Andre_Butler___13Ho___Assessment
         //Create a constructor (initialises the values of the fields)
         public Missile(int spacing)
         {
-           //x=5;
+            x = 5;
             y = spacing;
             width = 50;
             height = 25;
@@ -31,7 +31,7 @@ namespace Andre_Butler___13Ho___Assessment
         // Methods for the Planet class
         public void DrawMissile(Graphics g)
         {
-            
+            missileRec = new Rectangle(x, y, width, height);
             g.DrawImage(missileImage, missileRec);
         }
 
