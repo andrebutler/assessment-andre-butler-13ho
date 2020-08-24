@@ -13,7 +13,6 @@ namespace Andre_Butler___13Ho___Assessment
     public partial class Form1 : Form
     {
         Graphics g; //declare a graphics object called g
-        Planet planet1 = new Planet(10); //create the object, planet1
         // declare space for an array of 7 objects called planet 
         Planet planet = new Planet();
         Random yspeed = new Random();
@@ -49,7 +48,7 @@ namespace Andre_Butler___13Ho___Assessment
                 missile[i].DrawMissile(g);
             }
 
-            planet1.DrawPlanet(g);
+            planet.DrawPlanet(g);
         }
 
         private void Form1_KeyDown(object sender, KeyEventArgs e)
