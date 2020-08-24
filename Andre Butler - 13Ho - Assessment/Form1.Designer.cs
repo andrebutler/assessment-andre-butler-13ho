@@ -32,6 +32,7 @@
             this.PnlGame = new System.Windows.Forms.Panel();
             this.TmrPlanet = new System.Windows.Forms.Timer(this.components);
             this.TmrShip = new System.Windows.Forms.Timer(this.components);
+            this.serviceController1 = new System.ServiceProcess.ServiceController();
             this.SuspendLayout();
             // 
             // PnlGame
@@ -41,7 +42,8 @@
             this.PnlGame.Name = "PnlGame";
             this.PnlGame.Size = new System.Drawing.Size(425, 358);
             this.PnlGame.TabIndex = 0;
-            //
+            this.PnlGame.Paint += new System.Windows.Forms.PaintEventHandler(this.PnlGame_Paint);
+            // 
             // TmrPlanet
             // 
             this.TmrPlanet.Enabled = true;
@@ -73,6 +75,7 @@
         private System.Windows.Forms.Panel PnlGame;
         private System.Windows.Forms.Timer TmrPlanet;
         private System.Windows.Forms.Timer TmrShip;
+        private System.ServiceProcess.ServiceController serviceController1;
     }
 }
 

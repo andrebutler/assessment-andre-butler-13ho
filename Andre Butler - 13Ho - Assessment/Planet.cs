@@ -18,7 +18,7 @@ namespace Andre_Butler___13Ho___Assessment
         //Create a constructor (initialises the values of the fields)
         public Planet()
         {
-            x = 400;
+            x = 10;
             y = 10;
             width = 25;
             height = 100;

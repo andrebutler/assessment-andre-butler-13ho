@@ -38,7 +38,7 @@ namespace Andre_Butler___13Ho___Assessment
 
         public void MoveMissile()
         {
-        
+            x+=5;
 
             missileRec.Location = new Point(x, y);
         }

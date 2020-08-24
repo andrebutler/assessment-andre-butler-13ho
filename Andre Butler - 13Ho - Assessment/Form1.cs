@@ -36,7 +36,7 @@ namespace Andre_Butler___13Ho___Assessment
             //get the graphics used to paint on the panel control
             g = e.Graphics;
             //call the Planet class's DrawPlanet method to draw the image planet1 
-           
+            planet.DrawPlanet(g);
             for (int i = 0; i < 7; i++)
             {
 
@@ -46,9 +46,10 @@ namespace Andre_Butler___13Ho___Assessment
 
                 //call the Planet class's drawPlanet method to draw the images
                 missile[i].DrawMissile(g);
+               
             }
 
-            planet.DrawPlanet(g);
+            
         }
 
         private void Form1_KeyDown(object sender, KeyEventArgs e)
@@ -87,7 +88,7 @@ namespace Andre_Butler___13Ho___Assessment
         {
             for (int i = 0; i < 7; i++)
             {
-                missile[i].MoveMissile();//error arises here upon start up
+                missile[i].MoveMissile();
 
             }
             PnlGame.Invalidate();//makes the paint event fire to redraw the panel
