@@ -42,10 +42,10 @@ namespace Andre_Butler___13Ho___Assessment
 
             if (move == "right")
             {
-                if (planetRec.Location.X > 450) // is spaceship within 50 of right side
+                if (planetRec.Location.X > 390) // is spaceship within 50 of right side
                 {
 
-                    x = 450;
+                    x = 390;
                     // spaceRec.Location = new Point(x, y);
                 }
                 else
