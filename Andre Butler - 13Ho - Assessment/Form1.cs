@@ -17,7 +17,7 @@ namespace Andre_Butler___13Ho___Assessment
         Planet planet = new Planet();
         Random xspeed = new Random();
         Missile[] missile = new Missile[7];
-        bool left, right;
+        bool left, right;//
         string move;
         public Form1()
         {
