@@ -40,7 +40,7 @@
             this.PnlGame.BackColor = System.Drawing.Color.DarkGray;
             this.PnlGame.Location = new System.Drawing.Point(12, 80);
             this.PnlGame.Name = "PnlGame";
-            this.PnlGame.Size = new System.Drawing.Size(425, 358);
+            this.PnlGame.Size = new System.Drawing.Size(425, 604);
             this.PnlGame.TabIndex = 0;
             this.PnlGame.Paint += new System.Windows.Forms.PaintEventHandler(this.PnlGame_Paint);
             // 
@@ -59,7 +59,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(600, 450);
+            this.ClientSize = new System.Drawing.Size(600, 696);
             this.Controls.Add(this.PnlGame);
             this.KeyPreview = true;
             this.Name = "Form1";
