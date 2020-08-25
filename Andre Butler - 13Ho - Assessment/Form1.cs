@@ -15,7 +15,7 @@ namespace Andre_Butler___13Ho___Assessment
         Graphics g; //declare a graphics object called g
         // declare space for an array of 7 objects called planet 
         Planet planet = new Planet();
-        Random yspeed = new Random();
+        Random xspeed = new Random();
         Missile[] missile = new Missile[7];
         bool left, right;
         string move;
@@ -41,8 +41,8 @@ namespace Andre_Butler___13Ho___Assessment
             {
 
                 // generate a random number from 5 to 20 and put it in rndmspeed
-                int rndmspeed = yspeed.Next(5, 20);
-                missile[i].y += rndmspeed;
+                int rndmspeed = xspeed.Next(5, 20);
+                missile[i].x += rndmspeed;
 
                 //call the Planet class's drawPlanet method to draw the images
                 missile[i].DrawMissile(g);
