@@ -15,6 +15,7 @@ namespace Andre_Butler___13Ho___Assessment
         Graphics g; //declare a graphics object called g
         // declare space for an array of 7 objects called planet 
         Planet planet = new Planet();
+        Missileshoot missileshoot = new Missileshoot();
         Random xspeed = new Random();
         Missile[] missile = new Missile[7];
         bool left, right, space;
@@ -85,7 +86,8 @@ namespace Andre_Butler___13Ho___Assessment
             }
             if (space) // if right arrow key pressed
             {
-                Close();
+                move = "space";
+                missileshoot.MoveMissileshoot(move);
      
             }
 
