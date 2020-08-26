@@ -17,7 +17,7 @@ namespace Andre_Butler___13Ho___Assessment
         Planet planet = new Planet();
         Random xspeed = new Random();
         Missile[] missile = new Missile[7];
-        bool left, right;//
+        bool left, right, space;
         string move;
         public Form1()
         {
@@ -56,6 +56,7 @@ namespace Andre_Butler___13Ho___Assessment
         {
             if (e.KeyData == Keys.Left) { left = true; }
             if (e.KeyData == Keys.Right) { right = true; }
+            if (e.KeyData == Keys.Space) { space = true; }
         }
 
         private void Form1_KeyUp(object sender, KeyEventArgs e)
@@ -63,10 +64,13 @@ namespace Andre_Butler___13Ho___Assessment
 
             if (e.KeyData == Keys.Left) { left = false; }
             if (e.KeyData == Keys.Right) { right = false; }
+            if (e.KeyData == Keys.Space) { space = false; }
 
         }
 
         
+
+
         private void TmrShip_Tick(object sender, EventArgs e)
         {
             if (right) // if right arrow key pressed
@@ -79,10 +83,15 @@ namespace Andre_Butler___13Ho___Assessment
                 move = "left";
                 planet.MovePlanet(move);
             }
+            if (space) // if right arrow key pressed
+            {
+                Close();
+     
+            }
 
         }
 
-
+        
 
         private void TmrPlanet_Tick(object sender, EventArgs e)
         {
