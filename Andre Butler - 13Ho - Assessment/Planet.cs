@@ -4,6 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Drawing;
 using System.Threading.Tasks;
+using System.Windows.Forms;
 
 namespace Andre_Butler___13Ho___Assessment
 {
@@ -14,6 +15,8 @@ namespace Andre_Butler___13Ho___Assessment
         public int x, y, width, height;//variables for the rectangle
         public Image planetImage;//variable for the planet's image
         public Rectangle planetRec;//variable for a rectangle to place our image in
+        public Image missileshootImage;//variable for the planet's image
+        public Rectangle missileshootRec;//variable for a rectangle to place our image in
         public int score;
         //Create a constructor (initialises the values of the fields)
         public Planet()
@@ -25,6 +28,8 @@ namespace Andre_Butler___13Ho___Assessment
             //planetImage contains the plane1.png image
             planetImage = Properties.Resources.planet;
             planetRec = new Rectangle(x, y, width, height);
+            missileshootImage = Properties.Resources.missileshoot;
+            missileshootRec = new Rectangle(x, y, width, height);
         }
 
 
@@ -35,6 +40,8 @@ namespace Andre_Butler___13Ho___Assessment
             g.DrawImage(planetImage, planetRec);
 
         }
+
+     
 
         public void MovePlanet(string move)
         {
@@ -72,8 +79,19 @@ namespace Andre_Butler___13Ho___Assessment
 
             }
 
+            if (move == "space")
+            {
+                missileshoot.DrawMissileshoot(g);
+            }
+
+
+
 
         }
+
+
+
+
 
 
 
@@ -82,3 +100,8 @@ namespace Andre_Butler___13Ho___Assessment
 
 
 }
+
+
+
+
+

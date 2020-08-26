@@ -84,11 +84,11 @@ namespace Andre_Butler___13Ho___Assessment
                 move = "left";
                 planet.MovePlanet(move);
             }
-            if (space) // if right arrow key pressed
+            if (space) // if space key pressed
             {
                 move = "space";
-                missileshoot.MoveMissileshoot(move);
-     
+                missileshoot.DrawMissileshoot(g);
+
             }
 
         }

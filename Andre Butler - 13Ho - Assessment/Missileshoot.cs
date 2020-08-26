@@ -4,6 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Drawing;
 using System.Threading.Tasks;
+using System.Windows.Forms;
 
 namespace Andre_Butler___13Ho___Assessment
 {
@@ -27,37 +28,15 @@ namespace Andre_Butler___13Ho___Assessment
             missileshootRec = new Rectangle(x, y, width, height);
         }
 
-        public void MoveMissileshoot(string move)
-        {
-            
 
-
-            if (move == "space")
-            {
-
-
-                if (missileshootRec.Location.X > 390) // is spaceship within 50 of right side
-                {
-
-                    x = 390;
-                    // spaceRec.Location = new Point(x, y);
-                }
-                else
-                {
-                    x += 5;
-                    // spaceRec.Location = new Point(x, y);
-                }
-
-            }
-
-
-        }
 
         public void DrawMissileshoot(Graphics g)
         {
-            missileshootRec = new Rectangle(x, y, width, height);
-            g.DrawImage(missileshootImage, missileshootRec);
+                    g.DrawImage(missileshootImage, missileshootRec);
         }
-    }
 
+
+      
+
+    }
 }
