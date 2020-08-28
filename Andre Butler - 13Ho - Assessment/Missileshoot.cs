@@ -25,13 +25,13 @@ namespace Andre_Butler___13Ho___Assessment
             height = 20;
             //planetImage contains the plane1.png image
             missileshootImage = Properties.Resources.missileshoot;
-            missileshootRec = new Rectangle(x, y, width, height);
         }
 
 
 
         public void DrawMissileshoot(Graphics g)
         {
+            missileshootRec = new Rectangle(x, y, width, height);
                     g.DrawImage(missileshootImage, missileshootRec);
         }
 

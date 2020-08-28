@@ -15,7 +15,8 @@ namespace Andre_Butler___13Ho___Assessment
         Graphics g; //declare a graphics object called g
         // declare space for an array of 7 objects called planet 
         Planet planet = new Planet();
-        Missileshoot missileshoot = new Missileshoot();
+        //declare a list missiles from the missile class
+        List<Missileshoot> missileshoot = new List<Missileshoot>();
         Random xspeed = new Random();
         Missile[] missile = new Missile[7];
         bool left, right, space;
@@ -47,17 +48,30 @@ namespace Andre_Butler___13Ho___Assessment
 
                 //call the Planet class's drawPlanet method to draw the images
                 missile[i].DrawMissile(g);
-               
+                
+
             }
 
-            
+
+            foreach (Missileshoot m in missileshoot)
+            {
+                m.DrawMissileshoot(g);
+            }
+
+
         }
 
         private void Form1_KeyDown(object sender, KeyEventArgs e)
         {
             if (e.KeyData == Keys.Left) { left = true; }
             if (e.KeyData == Keys.Right) { right = true; }
-            if (e.KeyData == Keys.Space) { space = true; }
+            if (e.KeyData == Keys.Space) { space = true;
+                Missileshoot missileshoot = new Missileshoot();
+                missileshoot.x = planet.x;
+                missileshoot.y = planet.y;
+                this.missileshoot.Add(missileshoot);
+            }
+
         }
 
         private void Form1_KeyUp(object sender, KeyEventArgs e)
@@ -87,7 +101,7 @@ namespace Andre_Butler___13Ho___Assessment
             if (space) // if space key pressed
             {
                 move = "space";
-                missileshoot.DrawMissileshoot(g);
+                
 
             }
 

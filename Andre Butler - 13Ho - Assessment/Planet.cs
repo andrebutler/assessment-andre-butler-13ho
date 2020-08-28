@@ -81,7 +81,7 @@ namespace Andre_Butler___13Ho___Assessment
 
             if (move == "space")
             {
-                missileshoot.DrawMissileshoot(g);
+                //missileshoot.DrawMissileshoot(g);
             }
 
 
