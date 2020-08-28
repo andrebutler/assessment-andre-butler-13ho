@@ -36,7 +36,13 @@ namespace Andre_Butler___13Ho___Assessment
         }
 
 
-      
+        public void MoveMissileshoot()
+        {
+            y -= 5;
+            missileshootRec.Location = new Point(x, y);
+        }
+
+
 
     }
 }

@@ -116,8 +116,17 @@ namespace Andre_Butler___13Ho___Assessment
                 missile[i].MoveMissile();
 
             }
+
+            foreach (Missileshoot m in missileshoot)
+            {
+                m.MoveMissileshoot();
+            }
+
+
             PnlGame.Invalidate();//makes the paint event fire to redraw the panel
         }
+
+
     }
 }
 
