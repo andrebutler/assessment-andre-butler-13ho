@@ -115,7 +115,7 @@ namespace Andre_Butler___13Ho___Assessment
             {
                 missile[i].MoveMissile();
                 //if a planet reaches the bottom of the Game Area reposition it at the top
-                if (missile[i].x >= PnlGame.Width)
+                if (missile[i].x >= PnlGame.Width-80)
                   {
                     missile[i].x = 30;
                 }
