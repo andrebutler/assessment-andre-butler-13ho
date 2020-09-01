@@ -94,6 +94,11 @@ namespace Andre_Butler___13Ho___Assessment
         {
             missileTime--;
             lblTime.Text = missileTime.ToString();
+            if(missileTime == 0)
+            {
+                Close();
+
+            }
         }
 
         private void Form1_Load(object sender, EventArgs e)
