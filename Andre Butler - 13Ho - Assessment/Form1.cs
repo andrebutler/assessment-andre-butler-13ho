@@ -21,6 +21,8 @@ namespace Andre_Butler___13Ho___Assessment
         Missile[] missile = new Missile[7];
         bool left, right, space;
         string move;
+        int missileTime = 120;
+
         public Form1()
         {
             InitializeComponent();
@@ -83,8 +85,21 @@ namespace Andre_Butler___13Ho___Assessment
 
         }
 
-        
+        private void lblTime_Click(object sender, EventArgs e)
+        {
+            //score
+        }
 
+        private void tmrTime_Tick(object sender, EventArgs e)
+        {
+            missileTime--;
+            lblTime.Text = missileTime.ToString();
+        }
+
+        private void Form1_Load(object sender, EventArgs e)
+        {
+            tmrTime.Start();
+        }
 
         private void TmrShip_Tick(object sender, EventArgs e)
         {
