@@ -19,9 +19,12 @@ namespace Andre_Butler___13Ho___Assessment
         List<Missileshoot> missileshoot = new List<Missileshoot>();
         Random xspeed = new Random();
         Missile[] missile = new Missile[7];
+        public Rectangle planetRec;//variable for a rectangle to place our image in
+        public Rectangle missileshootRec;//variable for a rectangle to place our image in
         bool left, right, space;
         string move;
         int missileTime = 120;
+        int score = 0;
 
         public Form1()
         {
@@ -31,6 +34,11 @@ namespace Andre_Butler___13Ho___Assessment
                 int y = 10 + (i * 75);
                 missile[i] = new Missile(y);
             }
+
+           
+
+
+
 
 
         }
@@ -87,15 +95,17 @@ namespace Andre_Butler___13Ho___Assessment
 
         private void lblTime_Click(object sender, EventArgs e)
         {
-            //score
+            
         }
 
         private void tmrTime_Tick(object sender, EventArgs e)
         {
             missileTime--;
             lblTime.Text = missileTime.ToString();
-            if(missileTime == 0)
+            if(missileTime == -1)
             {
+                tmrTime.Enabled = false;
+                System.Threading.Thread.Sleep(5000);
                 Close();
 
             }
@@ -127,7 +137,7 @@ namespace Andre_Butler___13Ho___Assessment
 
         }
 
-        
+
 
         private void TmrPlanet_Tick(object sender, EventArgs e)
         {
@@ -135,13 +145,28 @@ namespace Andre_Butler___13Ho___Assessment
             {
                 missile[i].MoveMissile();
                 //if a planet reaches the bottom of the Game Area reposition it at the top
-                if (missile[i].x >= PnlGame.Width-80)
-                  {
+                if (missile[i].x >= PnlGame.Width - 80)
+                {
                     missile[i].x = 30;
+
+
+
                 }
+                if (planet.planetRec.IntersectsWith(missileshoot[i].missileshootRec))
 
 
+                {
+
+                   Close();
+                }
             }
+
+
+          
+
+            
+
+        
 
             foreach (Missileshoot m in missileshoot)
             {
