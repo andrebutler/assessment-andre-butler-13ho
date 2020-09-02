@@ -19,12 +19,11 @@ namespace Andre_Butler___13Ho___Assessment
         List<Missileshoot> missileshoot = new List<Missileshoot>();
         Random xspeed = new Random();
         Missile[] missile = new Missile[7];
-        public Rectangle planetRec;//variable for a rectangle to place our image in
-        public Rectangle missileshootRec;//variable for a rectangle to place our image in
+       
         bool left, right, space;
         string move;
         int missileTime = 120;
-        int score = 0;
+        int score;
 
         public Form1()
         {
@@ -35,7 +34,7 @@ namespace Andre_Butler___13Ho___Assessment
                 missile[i] = new Missile(y);
             }
 
-           
+
 
 
 
@@ -58,15 +57,12 @@ namespace Andre_Butler___13Ho___Assessment
 
                 //call the Planet class's drawPlanet method to draw the images
                 missile[i].DrawMissile(g);
-                
+
 
             }
 
 
-            foreach (Missileshoot m in missileshoot)
-            {
-                m.DrawMissileshoot(g);
-            }
+           
 
 
         }
@@ -95,14 +91,14 @@ namespace Andre_Butler___13Ho___Assessment
 
         private void lblTime_Click(object sender, EventArgs e)
         {
-            
+
         }
 
         private void tmrTime_Tick(object sender, EventArgs e)
         {
             missileTime--;
             lblTime.Text = missileTime.ToString();
-            if(missileTime == -1)
+            if (missileTime == -1)
             {
                 tmrTime.Enabled = false;
                 System.Threading.Thread.Sleep(5000);
@@ -115,6 +111,7 @@ namespace Andre_Butler___13Ho___Assessment
         {
             tmrTime.Start();
         }
+
 
         private void TmrShip_Tick(object sender, EventArgs e)
         {
@@ -131,10 +128,19 @@ namespace Andre_Butler___13Ho___Assessment
             if (space) // if space key pressed
             {
                 move = "space";
-                
+
 
             }
 
+            foreach (Missileshoot m in missileshoot)
+            {
+                m.DrawMissileshoot(g);
+            }
+
+            foreach (Missileshoot m in missileshoot)
+            {
+                m.MoveMissileshoot();
+            }
         }
 
 
@@ -143,35 +149,24 @@ namespace Andre_Butler___13Ho___Assessment
         {
             for (int i = 0; i < 7; i++)
             {
+
+                
                 missile[i].MoveMissile();
                 //if a planet reaches the bottom of the Game Area reposition it at the top
-                if (missile[i].x >= PnlGame.Width - 80)
+                
+                if (missileshoot[i].missileshootRec.IntersectsWith(missile[i].missileRec)) 
+
+                {
+                    Close();
+                }
+
+                if (missile[i].x >= PnlGame.Width-80)
                 {
                     missile[i].x = 30;
-
-
-
-                }
-                if (planet.planetRec.IntersectsWith(missileshoot[i].missileshootRec))
-
-
-                {
-
-                   Close();
                 }
             }
-
-
-          
 
             
-
-        
-
-            foreach (Missileshoot m in missileshoot)
-            {
-                m.MoveMissileshoot();
-            }
 
 
             PnlGame.Invalidate();//makes the paint event fire to redraw the panel

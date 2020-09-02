@@ -32,7 +32,7 @@ namespace Andre_Butler___13Ho___Assessment
         public void DrawMissileshoot(Graphics g)
         {
             missileshootRec = new Rectangle(x, y, width, height);
-                    g.DrawImage(missileshootImage, missileshootRec);
+             g.DrawImage(missileshootImage, missileshootRec);
         }
 
 
