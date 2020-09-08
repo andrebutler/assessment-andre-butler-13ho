@@ -58,11 +58,18 @@ namespace Andre_Butler___13Ho___Assessment
                 //call the Planet class's drawPlanet method to draw the images
                 missile[i].DrawMissile(g);
 
+              
+
 
             }
 
+            foreach (Missileshoot m in missileshoot)
+            {
+                m.DrawMissileshoot(g);
+            }
 
-           
+
+
 
 
         }
@@ -132,10 +139,7 @@ namespace Andre_Butler___13Ho___Assessment
 
             }
 
-            foreach (Missileshoot m in missileshoot)
-            {
-                m.DrawMissileshoot(g);
-            }
+           
 
             foreach (Missileshoot m in missileshoot)
             {
@@ -150,16 +154,20 @@ namespace Andre_Butler___13Ho___Assessment
             for (int i = 0; i < 7; i++)
             {
 
-                
+
                 missile[i].MoveMissile();
                 //if a planet reaches the bottom of the Game Area reposition it at the top
-                
-                if (missileshoot[i].missileshootRec.IntersectsWith(missile[i].missileRec)) 
 
+                foreach (Missileshoot m in missileshoot)
                 {
-                    Close();
-                }
 
+                    if (m.missileshootRec.IntersectsWith(missile[i].missileRec))
+
+                    {
+                        Close();
+                    }
+                }
+            
                 if (missile[i].x >= PnlGame.Width-80)
                 {
                     missile[i].x = 30;
